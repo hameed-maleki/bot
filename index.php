@@ -267,7 +267,9 @@ bot('sendmessage',[
 👤 : $fullName
 👤 : @$username
 ☎️ : $phone
-🆔 : $from_id",
+🆔 : `$from_id`",
+
+  'parse_mode' => 'Markdown' // یا 'HTML' بر اساس نیاز
 ]);
         }
         else{
@@ -366,9 +368,8 @@ bot('sendMessage',[
 
 👤 : $fullName
 👤 : @$username
-☎️ : $phone
-🆔 : $chat_id",
-'parse_mode'=>"HTML",
+🆔 : `$chat_id`",
+  'parse_mode' => 'Markdown' // یا 'HTML' بر اساس نیاز
 ]);
 mysqli_query($conn,"UPDATE `users` SET `step`='none' WHERE id='$chat_id' LIMIT 1");
 }
@@ -1170,7 +1171,7 @@ bot('sendMessage',[
 
 کشور : امریکا
 اشتراک : 1 ماهه (دو کاربر)
-🆔شناسه کاربری : $chat_id
+🆔شناسه کاربری : `$chat_id`
 📆 تاریخ انقضا : $next",
         'parse_mode'=>"MarkDown",
         ]);
@@ -1179,7 +1180,7 @@ bot('sendMessage',[
         'chat_id'=>$chanSef,
         'text'=>"#خرید_جدید
 
-🆔 : $chat_id
+🆔 : `$chat_id`
 
 🔑 vpn key : $trsrul2233
 
@@ -1283,7 +1284,7 @@ bot('sendMessage',[
 
 کشور : امریکا
 اشتراک : 3 ماهه (دو کاربر)
-🆔شناسه کاربری : $chat_id
+🆔شناسه کاربری : `$chat_id`
 📆 تاریخ انقضا : $next90",
         'parse_mode'=>"MarkDown",
         ]);
@@ -1292,7 +1293,7 @@ bot('sendMessage',[
         'chat_id'=>$chanSef,
         'text'=>"#خرید_جدید
 
-🆔 : $chat_id
+🆔 : `$chat_id`
 
 🔑 vpn key : $trsrul2233
 
@@ -1390,7 +1391,7 @@ bot('sendMessage',[
 
 کشور : امریکا
 اشتراک : 1 ماهه (سه کاربر)
-🆔شناسه کاربری : $chat_id
+🆔شناسه کاربری : `$chat_id`
 📆 تاریخ انقضا : $next",
         'parse_mode'=>"MarkDown",
         ]);
@@ -1399,7 +1400,7 @@ bot('sendMessage',[
         'chat_id'=>$chanSef,
         'text'=>"#خرید_جدید
 
-🆔 : $chat_id
+🆔 : `$chat_id`
 
 🔑 vpn key : $trsrul2233
 
@@ -1492,16 +1493,16 @@ bot('sendMessage',[
 
 کشور : امریکا
 اشتراک : 3 ماهه (سه کاربر)
-🆔شناسه کاربری : $chat_id
+🆔شناسه کاربری : `$chat_id`
 📆 تاریخ انقضا : $next90",
-        'parse_mode'=>"MarkDown",
+          'parse_mode' => 'Markdown',
         ]);
 
         bot('sendMessage',[
         'chat_id'=>$chanSef,
         'text'=>"#خرید_جدید
 
-🆔 : $chat_id
+🆔 : `$chat_id`
 
 🔑 vpn key : $trsrul2233
 
@@ -1639,23 +1640,23 @@ bot('sendMessage',[
 
 نوع سرویس : sing-box
 اشتراک : 1 ماهه (دو کاربر)
-🆔شناسه کاربری : $chat_id
+🆔شناسه کاربری : `$chat_id`
 📆 تاریخ انقضا : $next",
-        'parse_mode'=>"MarkDown",
+          'parse_mode' => 'Markdown',
         ]);
 
-        bot('sendMessage',[
-        'chat_id'=>$chanSef,
-        'text'=>"#خرید_جدید
+        bot('sendMessage', [
+            'chat_id' => $chanSef,
+            'text' => "#خرید_جدید
 
-🆔 : $chat_id
+        🆔 : `$chat_id`
 
-🔗 : $trsrul2233
+        🔗 : $trsrul2233
 
-تاریخ انقضا : $next
-نوع سرویس : sing-box
-اشتراک : 1 ماهه (دو کاربر)",
-        'parse_mode'=>"HTML",
+        📆 تاریخ انقضا : $next
+        نوع سرویس : sing-box
+        اشتراک : 1 ماهه (دو کاربر)",
+            'parse_mode' => "Markdown",
         ]);
 
 $sql4    = "SELECT * FROM `Bought`";
@@ -1752,7 +1753,7 @@ bot('sendMessage',[
 
 نوع سرویس : sing-box
 اشتراک : 3 ماهه (دو کاربر)
-🆔شناسه کاربری : $chat_id
+🆔شناسه کاربری : `$chat_id`
 📆 تاریخ انقضا : $next90",
         'parse_mode'=>"MarkDown",
         ]);
@@ -1761,7 +1762,7 @@ bot('sendMessage',[
         'chat_id'=>$chanSef,
         'text'=>"#خرید_جدید
 
-🆔 : $chat_id
+🆔 : `$chat_id`
 
 🔗 : $trsrul2233
 
@@ -1859,7 +1860,7 @@ bot('sendMessage',[
 
 نوع سرویس : sing-box
 اشتراک : 1 ماهه (سه کاربر)
-🆔شناسه کاربری : $chat_id
+🆔شناسه کاربری : `$chat_id`
 📆 تاریخ انقضا : $next",
         'parse_mode'=>"MarkDown",
         ]);
@@ -1868,7 +1869,7 @@ bot('sendMessage',[
         'chat_id'=>$chanSef,
         'text'=>"#خرید_جدید
 
-🆔 : $chat_id
+🆔 : `$chat_id`
 
 🔗 : $trsrul2233
 
@@ -1961,7 +1962,7 @@ bot('sendMessage',[
 
 نوع سرویس : sing-box
 اشتراک : 3 ماهه (سه کاربر)
-🆔شناسه کاربری : $chat_id
+🆔شناسه کاربری : `$chat_id`
 📆 تاریخ انقضا : $next90",
         'parse_mode'=>"MarkDown",
         ]);
@@ -1970,7 +1971,7 @@ bot('sendMessage',[
         'chat_id'=>$chanSef,
         'text'=>"#خرید_جدید
 
-🆔 : $chat_id
+🆔 : `$chat_id`
 
 🔗 : $trsrul2233
 
@@ -2108,7 +2109,7 @@ bot('sendMessage',[
 
 نوع سرویس : v2rayNG
 اشتراک : 1 ماهه (دو کاربر)
-🆔شناسه کاربری : $chat_id
+🆔شناسه کاربری : `$chat_id`
 📆 تاریخ انقضا : $next",
         'parse_mode'=>"MarkDown",
         ]);
@@ -2117,7 +2118,7 @@ bot('sendMessage',[
         'chat_id'=>$chanSef,
         'text'=>"#خرید_جدید
 
-🆔 : $chat_id
+🆔 : `$chat_id`
 
 🔑 vpn key : $trsrul2233
 
@@ -2221,7 +2222,7 @@ bot('sendMessage',[
 
 نوع سرویس : v2rayNG
 اشتراک : 3 ماهه (دو کاربر)
-🆔شناسه کاربری : $chat_id
+🆔شناسه کاربری : `$chat_id`
 📆 تاریخ انقضا : $next90",
         'parse_mode'=>"MarkDown",
         ]);
@@ -2230,7 +2231,7 @@ bot('sendMessage',[
         'chat_id'=>$chanSef,
         'text'=>"#خرید_جدید
 
-🆔 : $chat_id
+🆔 : `$chat_id`
 
 🔑 vpn key : $trsrul2233
 
@@ -2328,7 +2329,7 @@ bot('sendMessage',[
 
 نوع سرویس : v2rayNG
 اشتراک : 1 ماهه (سه کاربر)
-🆔شناسه کاربری : $chat_id
+🆔شناسه کاربری : `$chat_id`
 📆 تاریخ انقضا : $next",
         'parse_mode'=>"MarkDown",
         ]);
@@ -2337,7 +2338,7 @@ bot('sendMessage',[
         'chat_id'=>$chanSef,
         'text'=>"#خرید_جدید
 
-🆔 : $chat_id
+🆔 : `$chat_id`
 
 🔑 vpn key : $trsrul2233
 
@@ -2430,7 +2431,7 @@ bot('sendMessage',[
 
 نوع سرویس : v2rayNG
 اشتراک : 3 ماهه (سه کاربر)
-🆔شناسه کاربری : $chat_id
+🆔شناسه کاربری : `$chat_id`
 📆 تاریخ انقضا : $next90",
         'parse_mode'=>"MarkDown",
         ]);
@@ -2439,7 +2440,7 @@ bot('sendMessage',[
         'chat_id'=>$chanSef,
         'text'=>"#خرید_جدید
 
-🆔 : $chat_id
+🆔 : `$chat_id`
 
 🔑 vpn key : $trsrul2233
 
@@ -3081,71 +3082,119 @@ bot('sendMessage',[
 ]);
 }
 
-function support(){
-
+function support() {
     global $chat_id;
     global $reply_kb_options_back;
     global $conn;
 
-    $sql2    = "SELECT `support` FROM `Settings`";
-    $result2 = mysqli_query($conn,$sql2);
-    $res2 = mysqli_fetch_assoc($result2);
-    $trsrul2  = $res2['support'];
+    // بررسی وضعیت تایید حساب کاربری
+    $sqlnumber = "SELECT phone FROM users WHERE id=$chat_id";
+    $resultnumber = mysqli_query($conn, $sqlnumber);
+    $resnumber = mysqli_fetch_assoc($resultnumber);
 
-    if($trsrul2 == "off"){
+    if ($resnumber['phone'] == 0) {
+        bot('sendMessage', [
+            'chat_id' => $chat_id,
+            'text' => "
+📱 لطفا ابتدا حساب کاربری خود را تایید نمایید.
 
-        bot('sendMessage',[
-        'chat_id'=>$chat_id,
-        'text'=>"❌ این بخش از طرف مدیریت خاموش میباشد",
-        'parse_mode'=>"HTML",
+👈جهت ساخت حساب کاربری ابتدا نیاز است شماره تلفن خود را تایید نمائید و سپس اقدام به استفاده از بخش پشتیبانی کنید.
+
+✔️اطلاعات حساب کاربری شما نزد ما محفوظ است و هیچ شخصی به آن دسترسی نخواهد داشت.
+",
+            'reply_markup' => json_encode([
+                'resize_keyboard' => true,
+                'keyboard' => [
+                    [['text' => "⏳تایید حساب کاربری⏳", 'request_contact' => true]],
+                ],
+            ]),
         ]);
         exit;
     }
 
-    mysqli_query($conn,"UPDATE `users` SET `step`='support' WHERE id='$chat_id' LIMIT 1");
+    // بررسی وضعیت بخش پشتیبانی
+    $sql2 = "SELECT `support` FROM `Settings`";
+    $result2 = mysqli_query($conn, $sql2);
+    $res2 = mysqli_fetch_assoc($result2);
+    $trsrul2 = $res2['support'];
 
-    bot('sendMessage',[
-'chat_id'=>$chat_id,
-'text'=>"📬 پیام خود را ارسال کنید",
-'parse_mode'=>"HTML",
-'reply_markup'=>json_encode($reply_kb_options_back),
-]);
+    if ($trsrul2 == "off") {
+        bot('sendMessage', [
+            'chat_id' => $chat_id,
+            'text' => "❌ این بخش از طرف مدیریت خاموش میباشد",
+            'parse_mode' => "HTML",
+        ]);
+        exit;
+    }
 
+    // به‌روزرسانی مرحله کاربر به 'support'
+    mysqli_query($conn, "UPDATE `users` SET `step`='support' WHERE id='$chat_id' LIMIT 1");
+
+    bot('sendMessage', [
+        'chat_id' => $chat_id,
+        'text' => "📬 پیام خود را ارسال کنید",
+        'parse_mode' => "HTML",
+        'reply_markup' => json_encode($reply_kb_options_back),
+    ]);
 }
 
-function testserver(){
 
+function testserver() {
     global $chat_id;
     global $conn;
+    global $message_id;
 
-    $sql22    = "SELECT `testserver` FROM `moton`";
-    $result22 = mysqli_query($conn,$sql22);
+    // بررسی وضعیت تایید حساب کاربری
+    $sqlnumber = "SELECT phone FROM users WHERE id=$chat_id";
+    $resultnumber = mysqli_query($conn, $sqlnumber);
+    $resnumber = mysqli_fetch_assoc($resultnumber);
+
+    if ($resnumber['phone'] == 0) {
+        bot('sendMessage', [
+            'chat_id' => $chat_id,
+            'text' => "
+📱 لطفا ابتدا حساب کاربری خود را تایید نمایید.
+✔️اطلاعات حساب کاربری شما نزد ما محفوظ است و هیچ شخصی به آن دسترسی نخواهد داشت.
+",
+            'reply_markup' => json_encode([
+                'resize_keyboard' => true,
+                'keyboard' => [
+                    [['text' => "⏳تایید حساب کاربری⏳", 'request_contact' => true]],
+                ],
+            ]),
+        ]);
+        exit;
+    }
+
+    // ادامه فرآیند تست سرور
+    $sql22 = "SELECT `testserver` FROM `moton`";
+    $result22 = mysqli_query($conn, $sql22);
     $res22 = mysqli_fetch_assoc($result22);
     $trsrul22 = $res22['testserver'];
 
-
-    bot('sendmessage',[
-    'chat_id'=> $chat_id,
-    'text'=> "لطفا چند لحظه صبر کنید.درحال پردازش درخواست شما هستیم...",
-    'parse_mode'=>"Markdown",
-    'reply_to_message_id'=>$message_id,
+    bot('sendMessage', [
+        'chat_id'=> $chat_id,
+        'text'=> "لطفا چند لحظه صبر کنید. در حال پردازش درخواست شما هستیم...",
+        'parse_mode'=>"Markdown",
+        'reply_to_message_id'=>$message_id,
     ]);
-    bot('sendmessage',[
-    'chat_id'=> $chat_id,
-    'text'=> "⏳",
-    'parse_mode'=>"Markdown",
-    'reply_to_message_id'=>$message_id,
+
+    bot('sendMessage', [
+        'chat_id'=> $chat_id,
+        'text'=> "⏳",
+        'parse_mode'=>"Markdown",
+        'reply_to_message_id'=>$message_id,
     ]);
-    sleep ('5');
 
-    bot('sendMessage',[
+    sleep(5);
 
-
-        'chat_id'=>$chat_id,
-        'text'=>"$trsrul22",
-        'parse_mode'=>"MarkDown",
-        ]);
+    bot('sendMessage', [
+        'chat_id' => $chat_id,
+        'text' => "$trsrul22",
+        'parse_mode' => "MarkDown",
+    ]);
 }
+
 
 function help(){
 
@@ -3197,13 +3246,14 @@ function profile(){
         'chat_id'=>$chat_id,
 'text'=>"👤 اطلاعات حساب شما
 
-👤 شناسه : $chat_id,
+👤 شناسه : `$chat_id`
 💳 موجودی : $trsrul2 هزار تومان
 🖥 تعداد سرویس ها : $res عدد
 ☎️ شماره تلفن : $trsrul22
 
+
 📱 @$bot_id",
-        'parse_mode'=>"HTML",
+    'parse_mode' => "Markdown",
         'reply_markup'=>json_encode([
         'inline_keyboard'=>[
         [
@@ -3603,7 +3653,7 @@ function Settings(){
             ['text'=>"✅ روشن کردن شارژ حساب",'callback_data'=>"sharjon"],
         ],
         [
-            ['text'=>"❌ خاموش کردن پشتیبانی",'callback_data'=>"supportoff"],
+            ['text'=>"❌ خاموش کردن سس",'callback_data'=>"supportoff"],
         ],
         [
             ['text'=>"✅ روشن کردن پشتیبانی",'callback_data'=>"supporton"],
